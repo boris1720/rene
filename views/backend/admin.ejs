@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <!-- Font -- >
+
+  <!-- Style -->
+    <% include ../partials/scripts.ejs %>
+
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- Page Content -->
+<div class="container">
+    <!-- Page Heading -->
+    <h1 class="my-4">Welcome, <%= user.username %></h1>
+    <div>
+        <a href="/">Site</a>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+            <div class="card h-100 admin-card">
+                <a href="/create"><img class="card-img-top admin-fill" src="/images/create.jpg" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="/create">Create</a>
+                    </h4>
+                    <p class="card-text">Dodaj</p>
+                    <p>vesti/recepti</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+            <div class="card h-100 admin-card">
+                <a href="/list"><img class="card-img-top" src="/images/edit.jpg" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="/list">Edit</a>
+                    </h4>
+                    <p class="card-text">Update/Delete</p>
+                    <p>vesti/recepti</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+            <div class="card h-100 admin-card">
+                <a href="#"><img class="card-img-top" src="/images/users.jpg" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="/users">User manager</a>
+                    </h4>
+                    <p class="card-text">Lista korisnika</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+            <div class="card h-100 admin-card">
+                <a href="#"><img class="card-img-top" src="/images/messages.jpg" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="/messages">Messages</a>
+                    </h4>
+                    <p class="card-text">Poruke</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/stylesheets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

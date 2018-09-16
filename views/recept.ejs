@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <!-- Font -- >
+
+  <!-- Style -->
+    <% include partials/scripts.ejs %>
+
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- header -->
+<% include header.ejs %>
+
+<!-- container -->
+<div class="container" style="padding: 20px">
+    <% if (data) { %>
+    <% data.forEach(function(recepti){
+    %>
+
+    <div class="row">
+        <div style="width: 10%; height: 900px;">
+            <h5>Recepti</h5>
+            <p><a href="/recepti/slatko">Slatki</a></p>
+            <p><a href="/recepti/slano">Slani</a></p>
+        </div>
+
+        <div class="card text-center" style="width: 80%">
+            <img class="card-img-top img-fluid" style="width: 768px; height: 432px" src="<%= recepti.img %>" alt="">
+            <div class="card-body">
+                <h1 class="card-title"><%= recepti.title %></h1>
+                <div>
+                <div style="text-align: left;"><%- recepti.sastojci %></div>
+                <div style="text-align: left;"><%- recepti.description %></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <% }) %>
+    <% } %>
+</div>
+<!-- footer -->
+<% include footer.ejs %>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/stylesheets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
