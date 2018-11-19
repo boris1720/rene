@@ -1,108 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr" lang="en-US">
 <head>
+    <!-- Document Meta
+        ============================================= -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><%= title %></title>
-    <!-- Font -- >
+    <!--IE Compatibility Meta-->
+    <meta name="author" content="zytheme"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Multi-purpose Business html5 template">
+    <link href="/assets/images/favicon/favicon.png" rel="icon">
 
-  <!-- Style -->
-    <% include ../partials/scripts.ejs %>
+    <!-- Fonts
+        ============================================= -->
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPoppins:300,400,500,600,700" rel="stylesheet" type="text/css">
 
-    <script src="https://cdn.ckeditor.com/ckeditor5/10.1.0/classic/ckeditor.js"></script>
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- Stylesheets
+        ============================================= -->
+    <link href="/assets/css/external.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+    <script src="/assets/js/html5shiv.js"></script>
+    <script src="/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Document Title
+        ============================================= -->
+    <title>Enormous | Multi-purpose Business Html5 Template</title>
 </head>
-
 <body>
-<!-- Page Content -->
-<div class="container">
-
-    <!-- Page Heading -->
-
-    <h1 class="my-4">Recepti</h1>
-
-    <a href="/create">
-        <button type="button" class="btn btn-default">Vesti</button>
-    </a>
-    <a href="/createrecepti">
-        <button type="button" class="btn btn-default" style="background-color: #81F781">Recepti</button>
-    </a>
-    <div style="padding: 20px"></div>
-
-    <div class="row">
-        <div class="col-lg-4">
-        </div>
-        <div class="col-lg-4">
-            <form role="form" action="/createrecepti/submit" method="post">
-                <div class="form-group">
-                    <h4>Title</h4>
-                    <input class="form-control" placeholder="Title" type="text" name="title">
-                </div>
-                <div class="form-group">
-                    <label>Sastojci</label>
-                    <textarea name="sastojci" id="editor"></textarea>
-                </div>
-                <div class="form-group">
-                    <label>Description</label>
-                    <textarea name="description" id="editor2"></textarea>
-                </div>
-                <div class="form-group">
-                    <label>Author</label>
-                    <input class="form-control" placeholder="Author" type="text" name="author">
-                </div>
-
-                <div class="form-group">
-                    <label>Image URL</label>
-                    <input class="form-control" type="text" name="img">
-                </div>
-                <div class="form-group">
-                    <label>Category</label>
-                    <select class="form-control" name="category">
-                        <option>slatko</option>
-                        <option>slano</option>
-                    </select>
-                </div>
-
-                <button type="submit" class="btn btn-default">Submit</button>
-
-                <a href="/admin">
-                    <button type="button" class="btn btn-default">Back</button>
-                </a>
-            </form>
-        </div>
-        <!-- /.col-lg-6 (nested) -->
-
+<div class="preloader">
+    <div class="load-bar">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
     </div>
-    <!-- /.row (nested) -->
+</div><!-- Document Wrapper
+	============================================= -->
+<div id="wrapper" class="wrapper clearfix">
+
+    <!-- Team #2
+    ============================================= -->
+    <section id="team4" class="team team-4 bg-white" style="padding-top: 50px">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+                    <div class="text--center heading heading-2 mb-50">
+                        <h2 class="heading--title">Recepti</h2>
+                        <div class="divider--line divider--center"></div>
+                        <ol class="breadcrumb">
+                            <li><a href="/admin"><span style="color: #0c6db0">admin</span></a></li>
+                            <li class="active"><span style="color: #0c6db0">create</span></li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- .col-md-6 end -->
+            </div>
+            <!-- .row end -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                    <div class="form">
+                        <form method="post" action="/create/submitrsss" class="contactForm mb-0">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Title:</label>
+                                    <input type="text" class="form-control" name="title" id="title" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <label>Description:</label>
+                                    <textarea class="form-control" name="description" id="description" rows="3" required></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label>Content text:</label>
+                                    <textarea class="form-control" name="content_text" id="content_text" rows="3" required></textarea>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Image:</label>
+                                    <input type="text" class="form-control" name="image" id="image"  required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Author:</label>
+                                    <% author_id.forEach(function (author) {  %>
+                                    <input type="text" class="form-control" name="author_id" id="author_id"  value="<%= author.id %>" required>
+                                    <% });%>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>ct_id:</label>
+                                    <input type="text" class="form-control" name="ct_id" id="ct_id" value="<%= ct_id %>" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Category:</label>
+                                    <input type="text" class="form-control" name="category_id" id="category_id" >
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Slug:</label>
+                                    <input type="text" class="form-control" name="slug" id="slug"  required>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="submit" value="Send Message" name="submit" class="btn btn--secondary btn--block">
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- .col-md-6 end -->
+            </div>
+            <!-- .row end -->
+        </div>
+        <!-- .container end -->
+    </section>
+    <!-- #team2 end  -->
+    <div class="clearfix mb-150"></div>
 
 
-</div>
-<!-- /.container -->
+
+
+
+</div><!-- #wrapper end -->
+
+<!-- Footer Scripts
+============================================= -->
+<script src="/assets/js/jquery-2.2.4.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/functions.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<!-- Include Editor JS files. -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1//js/froala_editor.pkgd.min.js"></script>
+<!-- Initialize the editor. -->
 <script>
-    ClassicEditor
-        .create( document.querySelector( '#editor' ) )
-        .then( editor => {
-            console.log( editor );
-        } )
-        .catch( error => {
-            console.error( error );
-        } );
+    $(function() {
+        $('textarea').froalaEditor()
+    });
 </script>
-<script>
-    ClassicEditor
-        .create( document.querySelector( '#editor2' ) )
-        .then( editor => {
-            console.log( editor );
-        } )
-        .catch( error => {
-            console.error( error );
-        } );
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/stylesheets/bootstrap/js/bootstrap.min.js"></script>
 </body>
-
 </html>
